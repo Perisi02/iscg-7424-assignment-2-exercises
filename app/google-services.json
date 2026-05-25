@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "683492893429",
+    "firebase_url": "https://fir-interaction-c4543-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "fir-interaction-c4543",
+    "storage_bucket": "fir-interaction-c4543.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:683492893429:android:9201837bb58288e9381bbc",
+        "android_client_info": {
+          "package_name": "com.example.exercises_v1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0OkTsgF1VD4Wb4T3MHTnYirVl7vKSdcc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
