@@ -24,9 +24,21 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     *
+     *
+     */
     public void goExerciseA(View view) {
+        Intent intent = new Intent(MainActivity.this, ExerciseA.class);
+        startActivity(intent);
     }
 
+    /**
+     *
+     *
+     */
     public void goExerciseB(View view) {
+        Intent intent = new Intent(MainActivity.this, ExerciseB.class);
+        startActivity(intent);
     }
 }
