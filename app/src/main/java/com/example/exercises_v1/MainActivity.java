@@ -24,19 +24,9 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    /**
-     *
-     */
-    public void goFirstExercise(View view) {
-        Intent intent = new Intent(MainActivity.this, FirebaseActivity.class);
-        startActivity(intent);
+    public void goExerciseA(View view) {
     }
 
-    /**
-     *
-     */
-    public void goSecondExercise(View view) {
-        Intent intent = new Intent(MainActivity.this, InteractionActivity.class);
-        startActivity(intent);
+    public void goExerciseB(View view) {
     }
 }
