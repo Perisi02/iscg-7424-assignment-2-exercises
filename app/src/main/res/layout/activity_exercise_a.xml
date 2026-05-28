@@ -4,14 +4,178 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ExerciseA"
     android:orientation="vertical"
-    android:gravity="center">
+    tools:context=".ExerciseA">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <!-- header maybe IDK-->
+    <!-- Search Operation -->
+    <SearchView
+        android:id="@+id/sv_search"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Exercise A\nComing soon!"
-        android:textAlignment="center"/>
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp" />
+
+    <!-- RecyclerView-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_heroCards"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_weight="1" />
+
+    <!-- text fields | 4 x attributes -->
+    <LinearLayout
+        android:id="@+id/ll_textFields"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <!-- Attribute #1-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Role:"
+                android:textAlignment="textEnd"/>
+
+            <EditText
+                android:id="@+id/et_rolse"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Role" />
+        </LinearLayout>
+
+        <!-- Attribute #2-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Name:"
+                android:textAlignment="textEnd"/>
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Name" />
+        </LinearLayout>
+
+        <!-- Attribute #3-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Passive-Role:"
+                android:textAlignment="textEnd" />
+
+            <EditText
+                android:id="@+id/et_passiveRole"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Passive role" />
+        </LinearLayout>
+
+        <!-- Attribute #4-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Affiliation:"
+                android:textAlignment="textEnd"/>
+
+            <EditText
+                android:id="@+id/et_affiliation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Affiliation" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- buttons for days -->
+    <LinearLayout
+        android:id="@+id/ll_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="vertical">
+
+        <!-- OK/Cancel -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_confirmAdd"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:onClick="addNew"
+                android:text="Confirm"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_cancelAdd"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:onClick="cancelAdd"
+                android:text="Cancel"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_createNew"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:onClick="openAddOperation"
+                android:text="Create New"
+                android:visibility="visible" />
+        </LinearLayout>
+        <!-- Add Operation -->
+
+        <!-- Update Operation -->
+        <Button
+            android:id="@+id/btn_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="updateEntity"
+            android:text="Update" />
+
+        <!-- Delete Operation-->
+        <Button
+            android:id="@+id/btn_deleteEntity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="deleteEntity"
+            android:text="Delete" />
+    </LinearLayout>
 
 </LinearLayout>
